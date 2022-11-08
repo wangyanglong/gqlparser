@@ -392,6 +392,8 @@ func (s *Lexer) readString() (Token, *gqlerror.Error) {
 				buf.WriteByte('\r')
 			case 't':
 				buf.WriteByte('\t')
+			case 'v':
+				buf.WriteByte('\v')
 			case 'x':
 				if s.end+4 >= inputLen {
 					s.end++
